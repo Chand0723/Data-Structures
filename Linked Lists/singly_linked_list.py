@@ -28,7 +28,7 @@ class SinglyLinkedList:
         self.length += 1
 
     def insert_at_pos(self, pos, data):
-        if pos < 0 or pos > self.length:
+        if pos < 1 or pos > self.length:
             print('Enter a valid position')
             return None
 
@@ -68,7 +68,7 @@ class SinglyLinkedList:
             self.length -= 1
     
     def delete_at_pos(self, pos):
-        if pos > self.length or pos < 0:
+        if pos > self.length or pos < 1:
             print('Enter a valid postion')
 
         if pos == 1:
@@ -86,8 +86,10 @@ class SinglyLinkedList:
                 print('Please enter a valid position')
             elif pos == 1:
                 self.delete_first_node()
+                self.length -= 1
             elif pos == self.length:
                 self.delete_last_node()
+                self.length -= 1
             else:
                 while count < pos:
                     count = count + 1
