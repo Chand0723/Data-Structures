@@ -25,7 +25,10 @@ class Stack:
         return self.length
 
     def peek(self):
-        return self.stk[-1]
+        if self.length == 0:
+            print('No data in stack')
+        else:
+            return self.stk[-1]
 
     def print_stack(self):
         print(self.stk)
